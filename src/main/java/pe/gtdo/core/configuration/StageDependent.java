@@ -1,4 +1,4 @@
-package pe.gtdo.configuration;
+package pe.gtdo.core.configuration;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.PARAMETER;

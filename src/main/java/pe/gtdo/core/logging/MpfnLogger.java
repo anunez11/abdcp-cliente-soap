@@ -1,4 +1,4 @@
-package pe.gtdo.logging;
+package pe.gtdo.core.logging;
 
 /**
  * <ul>
@@ -10,7 +10,7 @@ package pe.gtdo.logging;
  * @author OSIS
  * @version 1.0 , 15/04/2016
  */
-public interface AbdcpLogger {
+public interface MpfnLogger {
 	
 	/**
 	 * Debug.

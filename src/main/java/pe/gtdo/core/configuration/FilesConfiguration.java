@@ -1,4 +1,4 @@
-package pe.gtdo.configuration;
+package pe.gtdo.core.configuration;
 
 /**
  * <ul>
