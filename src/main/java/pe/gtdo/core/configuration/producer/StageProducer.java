@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import pe.gtdo.core.configuration.Configurable;
 import pe.gtdo.core.configuration.FilesConfiguration;
 import pe.gtdo.core.configuration.type.StageApplication;
-import pe.gtdo.core.logging.MpfnLogger;
+import pe.gtdo.core.logging.AbdcpLogger;
 
 /**
  * <ul>
@@ -33,7 +33,7 @@ public class StageProducer implements Serializable {
 	
 	/** La log. */
 	@Inject
-	MpfnLogger log;
+	AbdcpLogger log;
 	
 	/** La configuration file. */
 	private Properties configurationFile;

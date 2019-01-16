@@ -7,7 +7,7 @@ import javax.enterprise.inject.spi.InjectionPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pe.gtdo.core.logging.MpfnLogger;
+import pe.gtdo.core.logging.AbdcpLogger;
 
 /**
  * <ul>
@@ -29,7 +29,7 @@ public class LoggerProducer {
 	 * @return logger
 	 */
 	@Produces
-	public MpfnLogger getLogger(InjectionPoint ip) {
+	public AbdcpLogger getLogger(InjectionPoint ip) {
 		Class<?> aClass = ip.getMember().getDeclaringClass();
         Logger logger = LoggerFactory.getLogger(aClass.getName());
         return new Slf4Logger(logger);

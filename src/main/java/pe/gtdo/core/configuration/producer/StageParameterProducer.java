@@ -15,7 +15,7 @@ import pe.gtdo.core.configuration.Configurable;
 import pe.gtdo.core.configuration.FilesConfiguration;
 import pe.gtdo.core.configuration.StageDependent;
 import pe.gtdo.core.configuration.type.StageApplication;
-import pe.gtdo.core.logging.MpfnLogger;
+import pe.gtdo.core.logging.AbdcpLogger;
 
 /**
  * <ul>
@@ -35,7 +35,7 @@ public class StageParameterProducer implements Serializable {
 	
 	/** La log. */
 	@Inject
-	MpfnLogger log;
+	AbdcpLogger log;
 	
 	/** La configuration file. */
 	private Properties configurationFile;

@@ -2,7 +2,7 @@ package pe.gtdo.core.logging.producer;
 
 import org.slf4j.Logger;
 
-import pe.gtdo.core.logging.MpfnLogger;
+import pe.gtdo.core.logging.AbdcpLogger;
 
 /**
  * <ul>
@@ -14,7 +14,7 @@ import pe.gtdo.core.logging.MpfnLogger;
  * @author OSIS
  * @version 1.0 , 15/04/2016
  */
-public class Slf4Logger implements MpfnLogger {
+public class Slf4Logger implements AbdcpLogger {
 	
 	/** La logger. */
 	private Logger logger; 
