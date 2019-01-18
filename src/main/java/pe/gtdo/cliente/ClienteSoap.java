@@ -35,9 +35,6 @@ public class ClienteSoap {
 		this.servicio=servicio;
 	}
 	
-	
-	
-	
 	public ABDCPWebServicePortType getProxyAbdcp() throws AbdcpException{
 	    
 		ABDCPWebServicePortType proxy=null;
@@ -59,8 +56,7 @@ public class ClienteSoap {
 
 		return proxy;
 		
-	}
-	
+	}	
 	
 	public ReceiveMessageResponse enviarMensaje(byte[] attachedDoc,String password,String userId ,String xmlMsg ) throws AbdcpException{
 		
@@ -72,11 +68,7 @@ public class ClienteSoap {
 		parameters.setXmlMsg(xmlMsg);
 		return proxy.receiveMessage(parameters);
 		
-	}
-	
-	
-	
-	
+	}	
 	
 	
 }
