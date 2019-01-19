@@ -25,23 +25,23 @@ public class ClienteSoap {
 	private String targetName ;
 	private String servicio ;
 	private String endPoint;
+	private String serviceName;
 	
-	
-	public void setConfig(String wsdl,String targetName ,String servicio , String endPoint){
+	public void setConfig(String wsdl,String targetName ,String serviceName , String endPoint){
 		
 		this.targetName=targetName;
 		this.endPoint=endPoint;
 		this.wsdl=wsdl;
-		this.servicio=servicio;
+		this.serviceName=serviceName;
 	}
 	
-	public ABDCPWebServicePortType getProxyAbdcp() throws AbdcpException{
+	private ABDCPWebServicePortType getProxyAbdcp() throws AbdcpException{
 	    
 		ABDCPWebServicePortType proxy=null;
-		QName serviceName = new QName(this.targetName, this.endPoint);		
+		QName qname = new QName(this.targetName, this.serviceName);		
 		try {
 			URL wsdlURL = new URL(this.wsdl);				
-			Service service = Service.create(wsdlURL, serviceName);	
+			Service service = Service.create(wsdlURL, qname);	
 			proxy = (ABDCPWebServicePortType)service.getPort(ABDCPWebServicePortType.class);
 			BindingProvider b=(BindingProvider) proxy;			
 			Map<String,Object> map= new HashMap<String,Object>(); 
