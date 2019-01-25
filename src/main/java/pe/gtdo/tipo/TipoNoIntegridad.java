@@ -24,6 +24,40 @@ public class TipoNoIntegridad {
 	
 	@XmlElement(name="FechaRecepcionMensajeAnterior")
 	String fechaRecepcionMensajeAnterior;
+
+	public String getNumeroSecuencialSolicitud() {
+		return numeroSecuencialSolicitud;
+	}
+
+	public void setNumeroSecuencialSolicitud(String numeroSecuencialSolicitud) {
+		this.numeroSecuencialSolicitud = numeroSecuencialSolicitud;
+	}
+
+	public String getIdentificadorMensajeErroneo() {
+		return identificadorMensajeErroneo;
+	}
+
+	public void setIdentificadorMensajeErroneo(String identificadorMensajeErroneo) {
+		this.identificadorMensajeErroneo = identificadorMensajeErroneo;
+	}
+
+	public String getCausaNoIntegridad() {
+		return causaNoIntegridad;
+	}
+
+	public void setCausaNoIntegridad(String causaNoIntegridad) {
+		this.causaNoIntegridad = causaNoIntegridad;
+	}
+
+	public String getFechaRecepcionMensajeAnterior() {
+		return fechaRecepcionMensajeAnterior;
+	}
+
+	public void setFechaRecepcionMensajeAnterior(String fechaRecepcionMensajeAnterior) {
+		this.fechaRecepcionMensajeAnterior = fechaRecepcionMensajeAnterior;
+	}
+	
+	
 	
 	
 }
