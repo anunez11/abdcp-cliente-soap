@@ -25,7 +25,6 @@ public class TipoCuerpoMensaje {
 
 	@XmlElement(name="RechazadaABDCP" )
 	TipoRechazadaABDCP rechazadaABDCP  ;
-	
 	@XmlElement(name="EnvioSolicitudCedente" )
 	TipoEnvioSolicitudCedente envioSolicitudCedente  ;
 	
@@ -34,7 +33,6 @@ public class TipoCuerpoMensaje {
 	
 	@XmlElement(name="SolicitudAceptadaCedente" )
 	TipoSolicitudAceptadaCedente solicitudAceptadaCedente  ;
-	
 	@XmlElement(name="SolicitudProcedente" )
 	TipoSolicitudProcedente solicitudProcedente  ;
 	
@@ -47,7 +45,7 @@ public class TipoCuerpoMensaje {
 	@XmlElement(name="FueraLimiteEjecutarPortabilidad" )
 	TipoFueraLimiteEjecutarPortabilidad fueraLimiteEjecutarPortabilidad  ;
 	
-	@XmlElement(name="programadaEjecutarPortabilidad" )
+	@XmlElement(name="ProgramadaEjecutarPortabilidad" )
 	TipoProgramadaEjecutarPortabilidad programadaEjecutarPortabilidad  ;
 	
 	@XmlElement(name="SolicitudRetorno" )
@@ -65,7 +63,7 @@ public class TipoCuerpoMensaje {
 	@XmlElement(name="AsignacionNumeroConsultaPrevia" )
 	TipoAsignacionNumeroSolicitud asignacionNumeroConsultaPrevia  ;
 	
-	@XmlElement(name="consultaPreviaRechazadaABDCP" )
+	@XmlElement(name="ConsultaPreviaRechazadaABDCP" )
 	TipoRechazadaABDCP ConsultaPreviaRechazadaABDCP  ;
 	
 	@XmlElement(name="ConsultaPreviaEnvioCedente" )

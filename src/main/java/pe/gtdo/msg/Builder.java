@@ -204,17 +204,18 @@ public class Builder {
 		return this;		
 	}
 	
-	public  String build() throws JAXBException{
+	
+	public  MensajeABDCP build() throws JAXBException{
 		mensaje.setCabeceraMensaje(cabecera);
     	mensaje.setCuerpoMensaje(cuerpo);
-        JAXBContext jaxbContext = JAXBContext.newInstance(MensajeABDCP.class);
+      /*  JAXBContext jaxbContext = JAXBContext.newInstance(MensajeABDCP.class);
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         StringWriter sw = new StringWriter();
-        jaxbMarshaller.marshal(mensaje, sw);
-        System.out.println(sw.toString());
-        return  sw.toString();
+        jaxbMarshaller.marshal(mensaje, sw);*/
+       // System.out.println(sw.toString());
+        return  mensaje;
         
     }	
 	

@@ -30,7 +30,7 @@ public class MensajeABDCP {
 		this.cuerpoMensaje = cuerpoMensaje;
 	}
 
-	
+
 	
 	
 	
