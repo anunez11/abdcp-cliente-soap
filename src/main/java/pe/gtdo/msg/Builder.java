@@ -143,7 +143,7 @@ public class Builder {
 	}
 	
 	
-	public Builder setEnvioSolicitudCedente(TipoFueraLimiteEjecutarPortabilidad  fueraLimiteEjecutarPortabilidad){
+	public Builder setFueraLimiteEjecutarPortabilidad(TipoFueraLimiteEjecutarPortabilidad  fueraLimiteEjecutarPortabilidad){
 		cuerpo.setFueraLimiteEjecutarPortabilidad(fueraLimiteEjecutarPortabilidad);		
 		return this;		
 	}
