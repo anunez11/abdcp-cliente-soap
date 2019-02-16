@@ -5,7 +5,11 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
+
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.xml.namespace.QName;
 
 import pe.gtdo.exception.AbdcpException;
@@ -15,11 +19,15 @@ import pe.gtdo.soap.ReceiveMessageResponse;
 
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.Service;
+import javax.xml.ws.handler.Handler;
 
 
 @ApplicationScoped
 public class ClienteSoap {
 
+	
+/*	@Inject
+	LoggingClientHandler loogginClient;*/
 	
 	private String wsdl;
 	private String targetName ;
@@ -43,7 +51,12 @@ public class ClienteSoap {
 			URL wsdlURL = new URL(this.wsdl);				
 			Service service = Service.create(wsdlURL, qname);	
 			proxy = (ABDCPWebServicePortType)service.getPort(ABDCPWebServicePortType.class);
-			BindingProvider b=(BindingProvider) proxy;			
+			BindingProvider b=(BindingProvider) proxy;
+			
+			
+			java.util.List<Handler> handlers = b.getBinding().getHandlerChain();
+			handlers.add(new LoggingClientHandler());
+			b.getBinding().setHandlerChain(handlers);
 			Map<String,Object> map= new HashMap<String,Object>(); 
 			map.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,this.endPoint);
 			map.put("javax.xml.ws.client.connectionTimeout", "30000");

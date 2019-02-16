@@ -27,6 +27,14 @@
 			<scope>provided</scope>
 		</dependency>
     
+       <dependency>
+      <groupId>pe.gtdo</groupId>
+      <artifactId>abdcp-configuration</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    
     </dependencies>
     <build>
 		<plugins>
