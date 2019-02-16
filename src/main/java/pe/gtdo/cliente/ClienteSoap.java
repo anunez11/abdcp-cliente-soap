@@ -65,6 +65,13 @@ public class ClienteSoap {
 		parameters.setAttachedDoc(attachedDoc);
 		parameters.setPassword(password);
 		parameters.setUserID(userId);
+		
+		
+		System.out.println("====================================================================================");
+		System.out.println("USUARIO : "+userId);
+		System.out.println("CLAVE : "+password);
+		System.out.println("====================================================================================");
+		
 		parameters.setXmlMsg(xmlMsg);
 		return proxy.receiveMessage(parameters);
 		
