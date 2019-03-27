@@ -48,12 +48,21 @@ public class LoggingClientHandler  implements SOAPHandler<SOAPMessageContext> {
 					.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			try {
+				
+				//baos.toString("UTF-8");
 				SOAPMessage soapMessage = context.getMessage();
+				soapMessage.setProperty(SOAPMessage.CHARACTER_SET_ENCODING, "UTF-8");
+				soapMessage.setProperty(SOAPMessage.WRITE_XML_DECLARATION, "true");
 				soapMessage.writeTo(baos);
 				String a= esSalida ? "OUT" : "IN";
-				System.out.println(" ==========================  CLIENTE SOAP     ============================================> ");
+				String t= esSalida ? "ENVIO" : "RESPUESTA";
+				
+			//	System.out.println(" ==========================   ");
+				System.out.println(" "+t);
+				System.out.println(" ==========================   ");				
+				//System.out.println(" ==========================   ");
 				System.out.println(a+" : "+baos.toString());
-				System.out.println(" ==========================================================================================> ");
+				System.out.println(" ========================== ");
 				
 				//LOG.info("{}=[{}]", esSalida ? "OUT" : "IN",baos.toString());
 				
