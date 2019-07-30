@@ -56,11 +56,11 @@ public class ClienteSoap {
 			Service service = Service.create(wsdlURL, qname);	
 			proxy = (ABDCPWebServicePortType)service.getPort(ABDCPWebServicePortType.class);
 			BindingProvider b=(BindingProvider) proxy;
-			
+			/*
 		   java.util.List<Handler> handlers = b.getBinding().getHandlerChain();
 		    handlers.add(new LoggingClientHandler());
 		    b.getBinding().setHandlerChain(handlers);
-			
+			*/
 			Map<String,Object> map= new HashMap<String,Object>(); 
 			map.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,this.endPoint);
 			map.put("javax.xml.ws.client.connectionTimeout", "30000");
